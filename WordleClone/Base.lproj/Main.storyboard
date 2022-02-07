@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8uE-hu-ZZd">
                                 <rect key="frame" x="50" y="94" width="318" height="718"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUw-l9-5WR">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUw-l9-5WR" userLabel="Stack View 1">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRV-BJ-49l">
@@ -83,7 +83,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2V-xi-wtd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2V-xi-wtd" userLabel="Stack View 2">
                                         <rect key="frame" x="0.0" y="75" width="318" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-E0-kn6">
@@ -95,7 +95,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                 <connections>
-                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="O5f-uM-FDi"/>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="pq4-sv-aWQ"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peg-Xe-Rij">
@@ -107,7 +107,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                 <connections>
-                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="rPo-qt-2Ft"/>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="4Nc-gN-vPq"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZ6-ws-uQJ">
@@ -119,7 +119,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                 <connections>
-                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="zWy-8J-mV1"/>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="QpG-Od-WQA"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-xe-K9u">
@@ -131,7 +131,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                 <connections>
-                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lLa-iO-Ma4"/>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="O9b-TN-gy1"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-Sv-0kz">
@@ -142,19 +142,275 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                                 <connections>
-                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="oVp-5f-kde"/>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="TnR-XW-zvh"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-0i-CGv">
-                                        <rect key="frame" x="0.0" y="150" width="318" height="568"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gM-o7-DlK" userLabel="Stack View 3">
+                                        <rect key="frame" x="0.0" y="150" width="318" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-YY-Ils" userLabel="Input20">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Czd-w8-Pfe"/>
+                                                    <constraint firstAttribute="width" constant="50" id="cMr-Df-YFj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="gIg-rd-zj1"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-A0-xK4">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="3Z7-c9-vwq"/>
+                                                    <constraint firstAttribute="height" constant="50" id="yvk-NK-9ya"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="ytQ-aO-MWB"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiN-tx-yNW">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aj5-Nz-rMG"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jBn-SF-lcR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="ozx-wc-HlJ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-3B-t4b">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="S3K-Hl-oEI"/>
+                                                    <constraint firstAttribute="height" constant="50" id="iic-Tr-aHL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="iAG-KZ-ozL"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ows-BJ-whN">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RjI-7o-QTX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="adJ-IL-tb5"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn4-qi-M3d" userLabel="Stack View 4">
+                                        <rect key="frame" x="0.0" y="225" width="318" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-gt-sLF">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="HJD-ng-9qT"/>
+                                                    <constraint firstAttribute="height" constant="50" id="uI7-OA-rY9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="k11-d4-jS6"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwb-gF-2Me">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="U8C-D3-P1u"/>
+                                                    <constraint firstAttribute="width" constant="50" id="hgK-iF-mJd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="BF8-6D-VDG"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gm2-cn-OIa">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Lrg-hf-Acn"/>
+                                                    <constraint firstAttribute="width" constant="50" id="qrW-ta-nr3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="fmI-J6-hhP"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ras-AR-kcE">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="MWp-3L-caY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ScC-nF-U4W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="PhP-aJ-xA2"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7t-Sr-mOm">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="xjP-Ws-led"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="d7J-ic-UOq"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgD-Is-qdR" userLabel="Stack View 5">
+                                        <rect key="frame" x="0.0" y="300" width="318" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-dl-nNw">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="10y-vS-nho"/>
+                                                    <constraint firstAttribute="width" constant="50" id="NUB-Qx-XUe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="rUl-yz-1cZ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fD-he-tYm">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="AbX-XM-Al8"/>
+                                                    <constraint firstAttribute="width" constant="50" id="DRx-fg-p9y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="PGZ-HT-vfq"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SJ-Cy-14Y">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="31Y-ST-Mgz"/>
+                                                    <constraint firstAttribute="height" constant="50" id="aEO-uN-Fc9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="jke-wh-ses"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-Eu-ySj">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="7Y4-K1-jea"/>
+                                                    <constraint firstAttribute="height" constant="50" id="TYC-9T-1TO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="2jB-Lp-5z9"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJS-aE-Q4R">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HPu-fg-egV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="ht2-Mp-t9X"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-f1-r1E" userLabel="Stack View 6">
+                                        <rect key="frame" x="0.0" y="375" width="318" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-zJ-wnR">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HAI-yp-EQ9"/>
+                                                    <constraint firstAttribute="width" constant="50" id="WI0-Ca-Zgx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="lJC-8Y-0qf"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOp-Cw-ESD">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Cwn-8i-RLt"/>
+                                                    <constraint firstAttribute="height" constant="50" id="PQr-pg-RS6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="5o9-2a-HZ3"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-RM-Up1">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="SYV-HM-Kez"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ciQ-az-zFo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="9vE-Mi-wTA"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-1r-IY0">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Cdw-jZ-4IY"/>
+                                                    <constraint firstAttribute="width" constant="50" id="R76-hV-ZR4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="HEI-qh-uLX"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lk6-dE-0dT">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IOg-Yg-0g8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="aE5-Jd-nv2"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-0i-CGv" userLabel="Stack View Bottom">
+                                        <rect key="frame" x="0.0" y="450" width="318" height="268"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-OE-DBC">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="518"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="218"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWK-1n-k6z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="518"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="218"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
@@ -162,7 +418,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uS-MQ-onT">
-                                                <rect key="frame" x="0.0" y="518" width="318" height="50"/>
+                                                <rect key="frame" x="0.0" y="218" width="318" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hi-hp-P7s">
                                                         <rect key="frame" x="0.0" y="0.0" width="218" height="50"/>
@@ -229,6 +485,26 @@
                         <outlet property="input12" destination="OZ6-ws-uQJ" id="RP5-Bi-4H6"/>
                         <outlet property="input13" destination="7kN-xe-K9u" id="nDn-hx-yKe"/>
                         <outlet property="input14" destination="4yG-Sv-0kz" id="x4c-XF-AOk"/>
+                        <outlet property="input20" destination="uSv-YY-Ils" id="PVm-SL-lSA"/>
+                        <outlet property="input21" destination="Ars-A0-xK4" id="OA5-OC-05R"/>
+                        <outlet property="input22" destination="qiN-tx-yNW" id="ANr-9e-UMw"/>
+                        <outlet property="input23" destination="nhX-3B-t4b" id="jWu-kQ-Qzt"/>
+                        <outlet property="input24" destination="Ows-BJ-whN" id="kdU-pN-FuC"/>
+                        <outlet property="input30" destination="hWF-gt-sLF" id="g6M-yC-Aqz"/>
+                        <outlet property="input31" destination="Xwb-gF-2Me" id="1ML-sn-ond"/>
+                        <outlet property="input32" destination="gm2-cn-OIa" id="WQp-Dc-bBH"/>
+                        <outlet property="input33" destination="ras-AR-kcE" id="6wi-Eh-eAL"/>
+                        <outlet property="input34" destination="H7t-Sr-mOm" id="jfe-Qv-2aA"/>
+                        <outlet property="input40" destination="H0c-dl-nNw" id="mGg-fn-ve9"/>
+                        <outlet property="input41" destination="4fD-he-tYm" id="N2z-JC-jy9"/>
+                        <outlet property="input42" destination="6SJ-Cy-14Y" id="P5n-pi-NAR"/>
+                        <outlet property="input43" destination="EHh-Eu-ySj" id="YrF-7O-RhW"/>
+                        <outlet property="input44" destination="RJS-aE-Q4R" id="GLV-Mk-bdO"/>
+                        <outlet property="input50" destination="Ne3-zJ-wnR" id="5dn-7O-9nm"/>
+                        <outlet property="input51" destination="MOp-Cw-ESD" id="Xhm-5n-LVn"/>
+                        <outlet property="input52" destination="q7j-RM-Up1" id="Kh7-uQ-Ck4"/>
+                        <outlet property="input53" destination="aZn-1r-IY0" id="H9Y-Zd-Is2"/>
+                        <outlet property="input54" destination="Lk6-dE-0dT" id="Jkh-Hz-31I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

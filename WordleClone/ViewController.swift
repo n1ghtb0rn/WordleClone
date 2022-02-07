@@ -26,13 +26,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var input13: UITextField!
     @IBOutlet weak var input14: UITextField!
     
+    @IBOutlet weak var input20: UITextField!
+    @IBOutlet weak var input21: UITextField!
+    @IBOutlet weak var input22: UITextField!
+    @IBOutlet weak var input23: UITextField!
+    @IBOutlet weak var input24: UITextField!
+    
+    
+    @IBOutlet weak var input30: UITextField!
+    @IBOutlet weak var input31: UITextField!
+    @IBOutlet weak var input32: UITextField!
+    @IBOutlet weak var input33: UITextField!
+    @IBOutlet weak var input34: UITextField!
+    
+    @IBOutlet weak var input40: UITextField!
+    @IBOutlet weak var input41: UITextField!
+    @IBOutlet weak var input42: UITextField!
+    @IBOutlet weak var input43: UITextField!
+    @IBOutlet weak var input44: UITextField!
+    
+    @IBOutlet weak var input50: UITextField!
+    @IBOutlet weak var input51: UITextField!
+    @IBOutlet weak var input52: UITextField!
+    @IBOutlet weak var input53: UITextField!
+    @IBOutlet weak var input54: UITextField!
+    
     var inputs = [[UITextField]]()
     
     var currentRowIndex = 0
     
     @IBOutlet weak var bottomLabel: UILabel!
     
-    let words = ["REACT", "SWIFT", "HELLO", "WORLD"]
+    let words = ["ABCDE", "EDCBA", "FFFFF"]
     
     var targetWord: String = ""
     
@@ -106,13 +131,15 @@ class ViewController: UIViewController {
     
     @IBAction func confirmClicked(_ sender: UIButton) {
         
-        var answer = [String]()
+        var answerString: String = ""
         
         let currentRow = inputs[currentRowIndex]
         
         for input in currentRow {
-            answer.append(input.text!)
+            answerString.append(input.text!)
         }
+        
+        let answer = Array(answerString)
         
         if answer.count != 5 {
             return
@@ -120,8 +147,57 @@ class ViewController: UIViewController {
         
         let target = Array(targetWord)
         
-        print(target)
+        var isValid = false
+        for current in words {
+            if current == answerString {
+                isValid = true
+            }
+        }
+        if !isValid {
+            return
+        }
         
+        print("WORD EXISTS!")
+        
+        var correctLetters: Int = 0
+        
+        for i in 0...answer.count-1 {
+            currentRow[i].backgroundColor = .darkGray
+            for j in 0...target.count-1 {
+                if answer[i] == target[j] {
+                    
+                    if i != j {
+                        currentRow[i].backgroundColor = .yellow
+                    }
+                    else {
+                        currentRow[i].backgroundColor = .green
+                        correctLetters += 1
+                    }
+                }
+            }
+        }
+        
+        for input in currentRow {
+            input.isEnabled = false
+        }
+        
+        if correctLetters == 5 {
+            print("Correct letters: \(correctLetters)")
+            return
+        }
+        
+        currentRowIndex += 1
+        
+        if currentRowIndex >= inputs.count {
+            print("Current row index: \(currentRowIndex)")
+            return
+        }
+        
+        let nextRow = inputs[currentRowIndex]
+        for input in nextRow {
+            input.isEnabled = true
+            input.alpha = 1.0
+        }
         
     }
     
@@ -145,6 +221,18 @@ class ViewController: UIViewController {
         
         let row1 = [input10!, input11!, input12!, input13!, input14!]
         self.inputs.append(row1)
+        
+        let row2 = [input20!, input21!, input22!, input23!, input24!]
+        self.inputs.append(row2)
+        
+        let row3 = [input30!, input31!, input32!, input33!, input34!]
+        self.inputs.append(row3)
+        
+        let row4 = [input40!, input41!, input42!, input43!, input44!]
+        self.inputs.append(row4)
+        
+        let row5 = [input50!, input51!, input52!, input53!, input54!]
+        self.inputs.append(row5)
         
         for i in 1...inputs.count-1 {
             let row = inputs[i]
