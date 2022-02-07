@@ -94,6 +94,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="O5f-uM-FDi"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peg-Xe-Rij">
                                                 <rect key="frame" x="67" y="0.0" width="50" height="50"/>
@@ -103,6 +106,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="rPo-qt-2Ft"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZ6-ws-uQJ">
                                                 <rect key="frame" x="134" y="0.0" width="50" height="50"/>
@@ -112,8 +118,11 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="zWy-8J-mV1"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-xe-K9u">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-xe-K9u">
                                                 <rect key="frame" x="201" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="fhq-1h-INZ"/>
@@ -121,6 +130,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lLa-iO-Ma4"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-Sv-0kz">
                                                 <rect key="frame" x="268" y="0.0" width="50" height="50"/>
@@ -129,6 +141,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="inputUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="oVp-5f-kde"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -209,6 +224,11 @@
                         <outlet property="input02" destination="Z0C-d2-rLm" id="fmQ-LM-rNO"/>
                         <outlet property="input03" destination="WWM-8z-F26" id="ngP-T8-biJ"/>
                         <outlet property="input04" destination="9F9-g9-03j" id="YFg-Hw-Fad"/>
+                        <outlet property="input10" destination="cOe-E0-kn6" id="7X7-Yg-4a6"/>
+                        <outlet property="input11" destination="peg-Xe-Rij" id="ERR-GR-nab"/>
+                        <outlet property="input12" destination="OZ6-ws-uQJ" id="RP5-Bi-4H6"/>
+                        <outlet property="input13" destination="7kN-xe-K9u" id="nDn-hx-yKe"/>
+                        <outlet property="input14" destination="4yG-Sv-0kz" id="x4c-XF-AOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

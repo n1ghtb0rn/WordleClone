@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var input03: UITextField!
     @IBOutlet weak var input04: UITextField!
     
+    @IBOutlet weak var input10: UITextField!
+    @IBOutlet weak var input11: UITextField!
+    @IBOutlet weak var input12: UITextField!
+    @IBOutlet weak var input13: UITextField!
+    @IBOutlet weak var input14: UITextField!
+    
     var inputs = [[UITextField]]()
     
     var currentRowIndex = 0
@@ -112,7 +118,9 @@ class ViewController: UIViewController {
             return
         }
         
+        let target = Array(targetWord)
         
+        print(target)
         
         
     }
@@ -134,6 +142,17 @@ class ViewController: UIViewController {
         
         let row0 = [input00!, input01!, input02!, input03!, input04!]
         self.inputs.append(row0)
+        
+        let row1 = [input10!, input11!, input12!, input13!, input14!]
+        self.inputs.append(row1)
+        
+        for i in 1...inputs.count-1 {
+            let row = inputs[i]
+            for current in row {
+                current.isEnabled = false
+                current.alpha = 0.5
+            }
+        }
         
     }
     
