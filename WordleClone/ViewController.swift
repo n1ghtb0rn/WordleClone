@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    /* confirm + cancel buttons */
+    @IBOutlet weak var buttonConfirm: UIButton!
+    @IBOutlet weak var buttonCancel: UIButton!
+    
+    /* text fields */
     @IBOutlet weak var input00: UITextField!
     @IBOutlet weak var input01: UITextField!
     @IBOutlet weak var input02: UITextField!
@@ -17,11 +22,21 @@ class ViewController: UIViewController {
     
     var inputs = [[UITextField]]()
     
+    var currentRowIndex = 0
+    
     @IBOutlet weak var bottomLabel: UILabel!
+    
+    let words = ["REACT", "SWIFT", "HELLO", "WORLD"]
+    
+    var targetWord: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        targetWord = words.randomElement()!
+        
+        print(targetWord)
         
         self.initInputArray()
     }
@@ -70,14 +85,48 @@ class ViewController: UIViewController {
         
         let nextPosition: CGPoint = CGPoint(x: currentPosition.x+1, y: currentPosition.y)
         
-        if Int(nextPosition.x) >= maxIndex {
-            bottomLabel.becomeFirstResponder()
+        if Int(nextPosition.x) > maxIndex {
+            currentInput.isEnabled = false
+            currentInput.isEnabled = true
             return
         }
         
         let nextInput = inputs[Int(nextPosition.y)][Int(nextPosition.x)]
         
         nextInput.becomeFirstResponder()
+        
+    }
+    
+    
+    @IBAction func confirmClicked(_ sender: UIButton) {
+        
+        var answer = [String]()
+        
+        let currentRow = inputs[currentRowIndex]
+        
+        for input in currentRow {
+            answer.append(input.text!)
+        }
+        
+        if answer.count != 5 {
+            return
+        }
+        
+        
+        
+        
+    }
+    
+    
+    @IBAction func cancelClicked(_ sender: UIButton) {
+        
+        let currentRow = inputs[currentRowIndex]
+        
+        for currentInput in currentRow {
+            currentInput.text = ""
+        }
+        
+        currentRow[0].becomeFirstResponder()
         
     }
     

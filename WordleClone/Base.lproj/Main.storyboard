@@ -61,7 +61,6 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWM-8z-F26">
                                                 <rect key="frame" x="201" y="0.0" width="50" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="lKF-GY-hee"/>
                                                     <constraint firstAttribute="height" constant="50" id="yPy-Xf-Q0z"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -126,7 +125,6 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-Sv-0kz">
                                                 <rect key="frame" x="268" y="0.0" width="50" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="AWU-a9-PeQ"/>
                                                     <constraint firstAttribute="height" constant="50" id="d0T-id-f6V"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -134,23 +132,61 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-0i-CGv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-0i-CGv">
                                         <rect key="frame" x="0.0" y="150" width="318" height="568"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWK-1n-k6z">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="568"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-OE-DBC">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="518"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWK-1n-k6z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="518"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uS-MQ-onT">
+                                                <rect key="frame" x="0.0" y="518" width="318" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hi-hp-P7s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="50"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pjv-hD-Zxu">
+                                                        <rect key="frame" x="218" y="0.0" width="100" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-Mt-IiN" userLabel="Button Confirm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="confirmClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TS4-Nl-UHS"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVx-Ab-YlB" userLabel="Button Cancel">
+                                                                <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="cancelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePY-oz-iot"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="aao-E0-KmI"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="qO9-TB-0zg"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <constraints>
-                                            <constraint firstItem="wWK-1n-k6z" firstAttribute="leading" secondItem="b9C-0i-CGv" secondAttribute="leading" id="9dQ-DZ-7uA"/>
-                                            <constraint firstAttribute="bottom" secondItem="wWK-1n-k6z" secondAttribute="bottom" id="Bq6-Ok-dMA"/>
-                                            <constraint firstAttribute="trailing" secondItem="wWK-1n-k6z" secondAttribute="trailing" id="P8G-9r-v4x"/>
-                                            <constraint firstItem="wWK-1n-k6z" firstAttribute="top" secondItem="b9C-0i-CGv" secondAttribute="top" id="hGx-A8-hZT"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -166,6 +202,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomLabel" destination="wWK-1n-k6z" id="oAn-Z5-bd3"/>
+                        <outlet property="buttonCancel" destination="aVx-Ab-YlB" id="ff0-eK-Aru"/>
+                        <outlet property="buttonConfirm" destination="TVj-Mt-IiN" id="u7Q-dZ-UU2"/>
                         <outlet property="input00" destination="zRV-BJ-49l" id="ZDK-jT-ksB"/>
                         <outlet property="input01" destination="JXO-7o-8Jz" id="P5g-6W-P21"/>
                         <outlet property="input02" destination="Z0C-d2-rLm" id="fmQ-LM-rNO"/>
@@ -179,6 +217,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -187,6 +227,12 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
