@@ -194,6 +194,9 @@ class ViewController: UIViewController {
         
         var delay: Double = 0.0
         let delayIncrease: Double = 0.2
+        //disable confirm and cancel buttons during color animation
+        buttonConfirm.isEnabled = false
+        buttonCancel.isEnabled = false
         
         for colorIndex in 0...currentRow.count-1 {
             delay += delayIncrease
@@ -228,6 +231,9 @@ class ViewController: UIViewController {
                 input.isEnabled = true
                 input.alpha = 1.0
             }
+            
+            self.buttonConfirm.isEnabled = true
+            self.buttonCancel.isEnabled = true
             
             nextRow[0].becomeFirstResponder()
             
