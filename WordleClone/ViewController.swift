@@ -76,6 +76,8 @@ class ViewController: UIViewController {
         print(targetWord)
         
         self.initInputArray()
+        
+        input00.becomeFirstResponder() //TODO: Fix this!
     }
 
     
@@ -168,7 +170,7 @@ class ViewController: UIViewController {
         var correctLetters: Int = 0
         
         var colors = [UIColor]()
-        for i in 0...answer.count-1 {
+        for _ in 0...answer.count-1 {
             colors.append(grayColor)
         }
         
@@ -285,7 +287,6 @@ class ViewController: UIViewController {
             if let path = Bundle.main.path(forResource: "wordlist", ofType: "txt"){
                 let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
                 words = data.components(separatedBy: "\n")
-                print(words)
             }
         } catch let err as NSError {
             // do something with Error
