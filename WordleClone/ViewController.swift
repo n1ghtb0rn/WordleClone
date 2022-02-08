@@ -227,6 +227,8 @@ class ViewController: UIViewController {
                 input.alpha = 1.0
             }
             
+            nextRow[0].becomeFirstResponder()
+            
         }
         
         
@@ -283,6 +285,7 @@ class ViewController: UIViewController {
             if let path = Bundle.main.path(forResource: "wordlist", ofType: "txt"){
                 let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
                 words = data.components(separatedBy: "\n")
+                print(words)
             }
         } catch let err as NSError {
             // do something with Error
